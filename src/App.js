@@ -1,5 +1,6 @@
 import EightBall from './EightBall';
-import './App.css';
+
+/** Renders app. */
 
 function App() {
   return (

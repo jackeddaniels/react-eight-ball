@@ -1,3 +1,4 @@
+import './Eightball.css';
 import answerList from "./answers";
 import { useState } from "react";
 import _ from "lodash";
@@ -5,10 +6,12 @@ import _ from "lodash";
 /** EightBall displaying random fortunes.
  *
  * Props:
- * - answers: Array of objects containing keys msg and color
+ * - answers: Array of objects containing keys msg and color:
+ *  [{ msg [string], color [string] }, ...]
  *
  * State:
- * - answer: Objects containing keys msg and color
+ * - answer: Objects containing keys msg and color:
+ *  { msg [string], color [string] }
  *
  * App -> EightBall
  */
@@ -22,10 +25,10 @@ function EightBall({answers = answerList}) {
 
   return (
     <div
-      id="eight-ball"
+      className="Eightball"
       style={ {backgroundColor: answer.color} }
       onClick={updateEightBall}>
-      <p id="text">{ answer.msg }</p>
+      <p className="Eightball-text">{ answer.msg }</p>
     </div>
   )
 }
